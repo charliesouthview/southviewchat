@@ -1,10 +1,9 @@
 import { useDebounce } from 'hooks';
 import { addPerson, getOtherPeople } from 'react-chat-engine';
+import { useEffect, useState, useRef } from 'react';
+import { Search } from 'semantic-ui-react';
+import { useChat } from 'context/ChatContext';
 
-const { useEffect, useState } = require('react');
-const { useRef } = require('react/cjs/react.development');
-const { Search } = require('semantic-ui-react');
-const { useChat } = require('context/ChatContext');
 
 export const SearchUsers = ({ visible, closeFn }) => {
   let searchRef = useRef();
